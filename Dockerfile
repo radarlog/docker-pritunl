@@ -3,7 +3,7 @@ FROM alpine:3.6
 MAINTAINER Ilian Ranguelov <me@radarlog.net>
 
 # Build deps
-RUN apk --no-cache add --update go git bzr wget py2-pip \
+RUN apk --no-cache add --update go git bzr curl py2-pip \
     gcc python python-dev musl-dev linux-headers libffi-dev openssl-dev \
     py-setuptools openssl procps ca-certificates openvpn
 
@@ -21,7 +21,7 @@ RUN export GOPATH=/go \
 
 RUN set -e \
     && cd /tmp \
-	&& wget -nv -O pritunl.tar.gz "https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz" \
+	&& curl -o pritunl.tar.gz -fSL "https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz" \
 	&& echo "${PRITUNL_SHA1} *pritunl.tar.gz" | sha1sum -c - \
 	&& tar zxvf pritunl.tar.gz \
 	&& cd pritunl-${PRITUNL_VERSION} \
