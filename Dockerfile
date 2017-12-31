@@ -2,10 +2,9 @@ FROM alpine:3.6
 
 MAINTAINER Ilian Ranguelov <me@radarlog.net>
 
-# Build deps
-RUN apk --no-cache add --update go git bzr curl py2-pip \
-    gcc python python-dev musl-dev linux-headers libffi-dev openssl-dev \
-    py-setuptools openssl procps ca-certificates openvpn
+# Build dependencies
+RUN apk --no-cache add --update go git curl openvpn openssl ca-certificates python \
+    py2-pip py-setuptools gcc python-dev musl-dev linux-headers libffi-dev openssl-dev
 
 RUN pip install --upgrade pip
 
