@@ -28,9 +28,9 @@ RUN wget https://github.com/pritunl/pritunl/archive/${VERSION}.tar.gz \
     && rm -rf *${VERSION}* \
     && rm -rf /tmp/* /var/cache/apk/*
 
-COPY . /
+COPY entrypoint.sh /bin/entrypoint.sh
 
 EXPOSE 9700 1194 1194/udp
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["pritunl", "start"]
