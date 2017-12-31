@@ -30,7 +30,7 @@ RUN wget https://github.com/pritunl/pritunl/archive/${VERSION}.tar.gz \
 
 COPY . /
 
-EXPOSE 9700 1194
+EXPOSE 9700 1194 1194/udp
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["pritunl", "start"]
