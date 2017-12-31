@@ -28,8 +28,9 @@ RUN wget https://github.com/pritunl/pritunl/archive/${VERSION}.tar.gz \
     && rm -rf *${VERSION}* \
     && rm -rf /tmp/* /var/cache/apk/*
 
-ADD . /
+COPY . /
 
-EXPOSE 1194
-EXPOSE 9700
+EXPOSE 9700 1194
+
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["pritunl", "start"]
