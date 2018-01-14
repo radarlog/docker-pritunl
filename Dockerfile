@@ -8,8 +8,8 @@ RUN apk --no-cache add --update go git curl openvpn openssl ca-certificates pyth
 
 RUN pip install --upgrade pip
 
-ENV PRITUNL_VERSION 1.28.1548.86
-ENV PRITUNL_SHA1 a7336d274bf68d0252dda5e85ad831ee9822579c
+ENV PRITUNL_VERSION 1.28.1583.74
+ENV PRITUNL_SHA1 6d21ec164381023bde3144b2fd0b6404e462382e
 
 # Pritunl Install
 RUN export GOPATH=/go \
