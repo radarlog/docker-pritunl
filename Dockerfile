@@ -10,8 +10,8 @@ RUN apk --no-cache add --update ${RUNTIME_DEPS} ${BUILD_DEPS}
 
 RUN pip install --upgrade pip
 
-ENV PRITUNL_VERSION 1.28.1583.74
-ENV PRITUNL_SHA1 6d21ec164381023bde3144b2fd0b6404e462382e
+ENV PRITUNL_VERSION 1.29.1596.36
+ENV PRITUNL_SHA1 c406fbee54c5bf8dbb221fe18e30ef7f857c31e9
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 # Pritunl Install
