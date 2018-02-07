@@ -10,8 +10,8 @@ RUN apk --no-cache add --update ${RUNTIME_DEPS} ${BUILD_DEPS}
 
 RUN pip install --upgrade pip
 
-ENV PRITUNL_VERSION 1.29.1596.36
-ENV PRITUNL_SHA1 c406fbee54c5bf8dbb221fe18e30ef7f857c31e9
+ENV PRITUNL_VERSION 1.29.1609.88
+ENV PRITUNL_SHA1 d99f9f86cdaf37d7f5cd64945614a8a46fb53075
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 # Pritunl Install
@@ -33,7 +33,7 @@ RUN set -e \
 
 RUN set -e \
     && apk del --purge $BUILD_DEPS \
-    && rm -rf /tmp/* /var/cache/apk/*
+    && rm -rf /tmp/* /var/cache/apk/* /go/*
 
 COPY entrypoint.sh /bin/entrypoint.sh
 
