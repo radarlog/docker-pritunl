@@ -2,8 +2,8 @@ FROM alpine:3.7
 
 MAINTAINER Ilian Ranguelov <me@radarlog.net>
 
-ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers openssl-dev py2-pip python-dev
-ENV RUNTIME_DEPS openvpn openssl ca-certificates python py-setuptools
+ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev
+ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
 ENV PRITUNL_VERSION 1.29.1614.10
 ENV PRITUNL_SHA1 c1a59b6bacd91f1d1720f229d67df52314301903
