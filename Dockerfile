@@ -5,8 +5,8 @@ MAINTAINER Ilian Ranguelov <me@radarlog.net>
 ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers openssl-dev py2-pip python-dev
 ENV RUNTIME_DEPS openvpn openssl ca-certificates python py-setuptools
 
-ENV PRITUNL_VERSION 1.29.1609.88
-ENV PRITUNL_SHA1 d99f9f86cdaf37d7f5cd64945614a8a46fb53075
+ENV PRITUNL_VERSION 1.29.1614.10
+ENV PRITUNL_SHA1 c1a59b6bacd91f1d1720f229d67df52314301903
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 RUN set -e \
