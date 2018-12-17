@@ -1,12 +1,12 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 MAINTAINER Ilian Ranguelov <me@radarlog.net>
 
 ENV BUILD_DEPS curl gcc git go musl-dev libffi-dev linux-headers libressl-dev py2-pip python-dev
 ENV RUNTIME_DEPS openvpn libressl ca-certificates python py-setuptools
 
-ENV PRITUNL_VERSION 1.29.1731.96
-ENV PRITUNL_SHA1 669fbb2352f618e14be62f0936fb8e2befe56068
+ENV PRITUNL_VERSION 1.29.1919.29
+ENV PRITUNL_SHA1 83fbdbc0426b553b5ebe3c1474f6dec653e42953
 ENV PRITUNL_URL https://github.com/pritunl/pritunl/archive/${PRITUNL_VERSION}.tar.gz
 
 RUN set -e \
