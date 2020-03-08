@@ -10,11 +10,15 @@ Current docker image is built from [alpine](https://hub.docker.com/_/alpine/) fo
 Pritunl requires a MongoDB database as a backend storage. You must set your own one by `MONGODB_URI` environment variable:
 
 ```shell
-docker run -d --privileged \
+docker run -d --privileged --name radarlog_pritunl \
 	-e MONGODB_URI=mongodb://mongodb-host:27017/pritunl \
 	-p 9700:9700 \
 	-p 1194:1194/udp \
 	-p 1194:1194/tcp \
 	radarlog/pritunl
 ```
-Pritunl web console is accessible at `http://pritunl-host:9700` with default username `pritunl` and password `pritunl`.
+Pritunl web console is accessible at `http://pritunl-host:9700`. After the MongoDB database uri has been configured the web console will display the login dialog. The default username is `pritunl`.
+To get the default password run:
+```shell
+docker exec -it radarlog_pritunl pritunl default-password
+```
