@@ -67,7 +67,7 @@ RUN set -e \
 
 COPY entrypoint.sh /bin/entrypoint.sh
 
-EXPOSE 9700 1194 1194/udp
+EXPOSE 9700 1194 1194/udp 51820/udp
 
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["pritunl", "start"]
