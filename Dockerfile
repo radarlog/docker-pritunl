@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-MAINTAINER Ilian Ranguelov <me@radarlog.net>
+LABEL maintainer="Ilian Ranguelov <me@radarlog.net>"
 
 ENV BUILD_DEPS curl \
     gcc \
